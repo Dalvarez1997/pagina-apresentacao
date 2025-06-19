@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apresentação - Álvaro</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <img src="https://avatars.githubusercontent.com/u/216802118?s=400&u=f9b8fe8476dcb22e22e7b5cc24eeb23ea8dc78bd&v=4" alt="Foto de Álvaro" class="perfil">
-    <h1>Álvaro Cavalcanti</h1>
-    <h2>Desenvolvedor Full Stack em Formação</h2>
-    <p>Formado em Análise e Desenvolvimento de Sistemas. Apaixonado por tecnologia, foco em mudar de vida através da programação!</p>
-    
-    <button onclick="alternarModo()">Alternar Modo</button>
+  <div class="calculadora">
+    <div class="display" id="display">0</div>
+    <div class="botoes">
+      <button onclick="limpar()">C</button>
+      <button onclick="inserir('(')">(</button>
+      <button onclick="inserir(')')">)</button>
+      <button onclick="inserir('/')">÷</button>
 
-    <div class="infos">
-      <p><strong>Gmail:</strong> alvaro.cavalcanti97@gmail.com</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/alvaro-cavalcanti</p>
-      <p><strong>GitHub:</strong> github.com/Dalvarez1997</p>
+      <button onclick="inserir('7')">7</button>
+      <button onclick="inserir('8')">8</button>
+      <button onclick="inserir('9')">9</button>
+      <button onclick="inserir('*')">×</button>
+
+      <button onclick="inserir('4')">4</button>
+      <button onclick="inserir('5')">5</button>
+      <button onclick="inserir('6')">6</button>
+      <button onclick="inserir('-')">−</button>
+
+      <button onclick="inserir('1')">1</button>
+      <button onclick="inserir('2')">2</button>
+      <button onclick="inserir('3')">3</button>
+      <button onclick="inserir('+')">+</button>
+
+      <button onclick="inserir('0')">0</button>
+      <button onclick="inserir('.')">.</button>
+      <button onclick="calcular()" class="igual">=</button>
     </div>
   </div>
-  <script>
-  function alternarModo() {
-    document.body.classList.toggle('modo-claro');
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
